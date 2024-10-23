@@ -1,0 +1,101 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+}
+
+:root {
+    --bg-black: #1a1a1a; 
+    --bg-gray: #2a2a2a;
+    --bg-gray-form: #333;
+    --bg-white: #fff;
+    --bg-white-ph: #ffffff5a;
+    --bg-pink: #d63384;
+    --bg-pink-hover: #b52a6b;
+    --bg-blue: #4285f4;
+    --bg-blue-hover:  #357ae8;
+    --shadow-color: #00000080;
+    --transition: .5s;
+}
+
+body {
+    background-color: var(--bg-black);
+    color: var(--bg-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-container {
+    background-color: var(--bg-gray);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px var(--shadow-color)
+}
+
+.form-control {
+    background-color: var(--bg-gray-form);
+    border: none;
+    color: var(--bg-white);  
+}
+
+.form-control::placeholder {
+    color: var(--bg-white-ph);
+}
+
+.form-control:focus {
+    background-color: var(--bg-gray-form);
+    border-color: var(--bg-pink)
+}
+
+.btn-block {
+    min-width: 100px;
+}
+
+.btn-primary {
+    background-color: var(--bg-pink);
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: var(--bg-pink-hover);
+    color: var(--bg-gray);
+    transition: var(--transition);
+}
+
+.google-btn {
+    background-color: var(--bg-blue);
+    border: none;
+}
+
+.google-btn:hover {
+    background-color: var(--bg-blue-hover);
+    color: var(--bg-gray);
+    transition: var(--transition);
+}
+
+.text-center a {
+    color: var(--bg-pink);
+    font-size: var(--login-font);
+}
+
+.text-center a:hover{
+    color: var(--bg-white-ph);
+    transition: var(--transition);
+}
+
+.logo {
+    display: block;
+    margin: 0 auto 1.5rem;
+    width: 200px;
+}
+
+@media (max-width: 768px) {
+    *{
+        font-size: 0.9rem;
+    }
+    .form-control, .btn-block{
+        font-size: 0.9rem;
+    }
+}   

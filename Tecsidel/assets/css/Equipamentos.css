@@ -1,0 +1,293 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+}
+
+:root {
+    --bg-black: #1a1a1a;
+    --bg-gray: #2a2a2a;
+    --bg-gray-form: #333;
+    --bg-white: #fff;
+    --bg-white-ph: #ffffff5a;
+    --bg-pink: #d63384;
+    --bg-pink-hover: #b52a6b;
+    --bg-blue: #4285f4;
+    --bg-blue-hover: #357ae8;
+    --tb-gray: #444;
+    --btn-white: #fff;
+    --btn-gray: #444;
+    --btn-dark-gray: #333;
+    --page-gray: #444;
+    --page-dark-gray: #333;
+    --page-white: #fff;
+    --page-purple: #6f42c1;
+    --status-green: #28a745;
+    --status-red: #dc3545;
+    --status-white: #fff;
+    --shadow-color: #00000080;
+    --margin-top: 6rem;
+    --transition: .3s;
+}
+
+body {
+    background-color: var(--bg-black);
+    color: var(--bg-white);
+}
+
+.box {
+    min-height: 100vh;
+}
+
+.sidebar {
+    background-color: var(--bg-gray-form);
+    padding: 0;
+    max-width: 15vw;
+}
+
+.logo-img {
+    width: 100%;
+    padding: 1vw;
+    object-fit: cover;
+    max-width: 250px;
+}
+
+
+.sidebar .nav-link {
+    white-space: nowrap;
+    color: var(--bg-white);
+}
+
+.sidebar .nav-link:hover {
+    background-color: var(--bg-pink);
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.profile i {
+    font-size: 20px;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+.profile i:hover {
+    color: var(--bg-pink);
+}
+
+.notification {
+    position: relative;
+    margin-right: .5rem;
+}
+
+.notification .badge-pill {
+    position: absolute;
+    font-size: 8px;
+    height: 12px;
+    bottom: .9rem;
+    left: .5rem;
+    background: var(--bg-pink);
+    color: var(--bg-white);
+}
+
+.notification i {
+    font-size: 20px;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    margin-right: .5rem;
+    cursor: pointer;
+}
+
+.notification i:hover {
+    color: var(--bg-pink);
+}
+
+.form-control {
+    font-size: 15px;
+}
+
+.card {
+    background-color: var(--bg-gray);
+    border-radius: 20px;
+    padding-top: 10px;
+
+}
+
+.card-header {
+    background-color: var(--bg-gray);
+    border-bottom: none;
+}
+
+.table tbody td {
+    vertical-align: middle;
+    font-size: 0.8rem;
+}
+
+.table tbody, thead {
+    border: 2px solid var(--tb-gray);
+    border-bottom: 2px solid var(--tb-gray);
+}
+
+.table thead th {
+    border-bottom: 2px solid var(--tb-gray);
+    font-size: 0.95rem;
+}
+
+.table tbody tr {
+    border-bottom: 1px solid var(--tb-gray);
+}
+
+.badge-operante {
+    background-color: var(--status-green);
+    color: var(--status-white);
+    font-size: 0.7rem;
+    min-width: 75px;
+    min-height: 20px;
+}
+
+.badge-falha {
+    background-color: var(--status-red);
+    color: var(--status-white);
+    font-size: 0.7rem;
+    min-width: 75px;
+    min-height: 20px;
+}
+
+.btn-detalhe {
+    background-color: var(--btn-dark-gray);
+    color: var(--btn-white);
+    border: 1px solid var(--btn-gray);
+    font-size: 0.7rem;
+    min-height: 30px;
+}
+
+.btn-detalhe:hover {
+    background-color: var(--btn-gray);
+}
+
+.d-pagination nav {
+    width: 140px;
+}
+
+.pagination {
+    width: 100%;
+}
+
+.pagination li {
+    width: 20%;
+}
+
+.pagination .page-link {
+    text-align:center;
+    font-size: 75%;
+    width: 100%;
+    padding-left: 10.5px;
+    padding-bottom: 10%;
+    background-color: var(--page-dark-gray);
+    color: var(--page-white);
+    border: 1px solid var(--page-gray);
+}
+
+.pagination .page-link:hover {
+    background-color: var(--page-gray);
+}
+
+.pagination .active .page-link {
+    padding-left: 11.5px;
+    background-color: var(--page-purple);
+    border-color: var(--page-purple);
+}
+
+#text-pagination {
+    font-size: .7rem;
+}
+
+@media (max-width:1200px) {
+    .sidebar {
+        max-width: 20vw;
+    }
+
+    .sidebar .nav-link {
+        font-size: 1rem;
+        margin-top: 5px;
+    }
+
+}
+
+@media (max-width:920px) {
+    .sidebar {
+        max-width: 20vw;
+    }
+
+    .sidebar .nav-link {
+        font-size: 0.8rem;
+        margin-top: 5px;
+    }
+
+
+    #cards h6 {
+        font-size: .75rem;
+    }
+}
+
+@media (max-width:630px) {
+    .sidebar {
+        max-width: 28vw;
+    }
+
+    .sidebar .nav-link {
+        padding: 0 !important;
+        font-size: 0.65rem;
+        margin-top: 5px;
+    }
+
+    .content h4 {
+        font-size: 1rem;
+        margin-top: 5px;
+    }
+
+    .content i {
+        font-size: 15px;
+        border-radius: 30%;
+        width: 15px;
+        height: 15px;
+        margin-right: .3rem;
+        cursor: pointer;
+    }
+
+    .badge-pill {
+        position: absolute;
+        font-size: 5px;
+        height: 4px;
+        bottom: .1rem;
+        left: .1rem;
+    }
+
+    .d-pagination nav {
+        width: 100px;
+    }
+
+    .pagination {
+        width: 100%;
+    }
+
+    .pagination li {
+        width: 20%;
+    }
+
+    .pagination .page-link {
+        font-size: 75%;
+        width: 20px;
+        padding-left: 10.5px;
+        padding: 1lvw;
+    }
+
+    .pagination .active .page-link {
+        padding-left: 3px;
+    }
+}

@@ -1,0 +1,230 @@
+*{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+}
+
+:root{
+    --bg-black: #1a1a1a; 
+    --bg-gray: #2a2a2a;
+    --bg-gray-form: #333;
+    --bg-white: #fff;
+    --bg-white-ph: #ffffff5a;
+    --bg-pink: #d63384;
+    --bg-pink-hover: #b52a6b;
+    --bg-blue: #4285f4;
+    --bg-blue-hover:  #357ae8;
+    --shadow-color: #00000080;
+    --transition: .3s;
+}
+
+body {
+    background-color: var(--bg-black);
+    color: var(--bg-white);
+}
+
+.box {
+    min-height: 100vh;
+}
+
+.sidebar {
+    background-color:var(--bg-gray-form);
+    padding: 0;
+    max-width: 15vw;
+}
+
+.logo-img{
+    width: 100%;
+    padding: 1vw;
+    object-fit: cover;
+    max-width: 250px;
+}
+
+.sidebar .nav-link {
+    white-space: nowrap;
+    color: var(--bg-white);
+}
+
+.sidebar .nav-link:hover {
+    background-color: var(--bg-pink);
+}
+
+.text-highlight {
+    color: var(--bg-pink);
+}
+.profile {
+    display: flex;
+    align-items: center;
+}
+.profile i{
+    font-size: 20px;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    margin-right: 1rem;
+    cursor:pointer;
+}
+
+.profile i:hover {
+    color: var(--bg-pink);
+}
+
+.notification {
+    position: relative;
+    margin-right: .5rem;
+}
+
+.notification .badge {
+    position: absolute;
+    font-size: 8px;
+    height: 12px;
+    bottom: .9rem;
+    left: .5rem;
+    background: var(--bg-pink);
+    color: var(--bg-white);
+}
+
+.notification i {
+    font-size: 20px;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    margin-right: .5rem;
+    cursor:pointer;
+}
+
+.notification i:hover {
+    color: var(--bg-pink);
+}
+
+.card {
+    background-color: var(--bg-gray);
+    border-radius: 20px;
+    height: 100%;
+    padding-top: 10px;
+}
+
+.card-header {
+    background-color: var(--bg-gray);
+    border-bottom: none;
+    height: 20%;
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+.card-body canvas{
+    min-height: 45vh;
+}
+
+.table  td, th, tr{
+    width: 100vw;
+    font-size: 0.9rem;
+    vertical-align: middle;
+}
+.table  td {
+    text-align: center;
+}
+
+#card-img {
+    margin-right: 48px;
+    margin-bottom: 8px;
+}
+
+#carouselExampleControls{
+    height: 100%;
+}
+
+#table2 {
+    padding-left: 48px;
+}
+
+#table2 .table td, tr, th  {
+    padding: 16px;
+    vertical-align: middle;
+}
+
+.d-flex video {
+    width: 100%;
+}
+
+@media (max-width:1200px) {
+    .sidebar {
+        max-width: 20vw;
+    }
+
+    .sidebar .nav-link{
+        font-size: 1rem;
+        margin-top: 5px;
+    }
+}
+
+@media (max-width:920px) {
+    .sidebar {
+        max-width: 20vw;
+    }
+
+    .sidebar .nav-link{
+        font-size: 0.8rem;
+        margin-top: 5px;
+    }
+
+    #charts h5, h6 {
+        font-size: .9rem;
+    }
+
+    #cards h6{
+        font-size: .75rem;
+    }
+}
+
+@media (max-width:630px) {
+    .sidebar {
+        max-width: 28vw;
+    }
+
+    .sidebar .nav-link{
+        padding: 0 !important;
+        font-size: 0.65rem;
+        margin-top: 5px;
+    }
+
+    .content i{
+        font-size: 15px;
+        border-radius: 30%;
+        width: 15px;
+        height: 15px;
+        margin-right: .3rem;
+        cursor:pointer;
+    }
+
+    .badge{
+        position: absolute;
+        font-size: 5px;
+        height: 4px;
+        bottom: .1rem;
+        left: .1rem;
+    }
+}
+
+@media (max-width: 768px){
+    #table2 {
+        padding-right: 48px;
+    }
+
+    #card-img {
+        margin-left: 48px;
+        margin-bottom: 24px;
+    }
+}
+
+@media (max-width: 390px){
+    .table-responsive {
+        padding: 8px !important;
+    }
+
+    #card-img {
+        margin: 8px;
+        margin-bottom: 16px;
+    }
+}

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acompanhamento de Tráfego - Plataforma de Gestão TECSIDEL</title>
+
+    <!-- Chamada Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <!-- Chamada Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Chamada Bootstrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- Chamada CSS-->
+    <link rel="stylesheet" href="../assets/css/Passagens.css">
+</head>
+
+<body>
+    <div class="d-flex box">
+
+<!--------- Side bar---------->
+        <div class="sidebar col-md-2 p-2">
+            <div class="img-center">
+                <img class="logo-img" src="../assets/images/Logo-Tecsidel.png" alt="Logo Tecsidel">
+            </div>
+            <nav class="nav flex-column px-0">
+                <a class="nav-link px-2 my-1" href="./Dashboard.html">Dashboard</a>
+                <a class="nav-link px-2 my-1" href="./Equipamentos.html">Equipamentos</a>
+                <a class="nav-link active px-2 my-1" href="./Passagens.html">Tráfego</a>
+                <a class="nav-link px-2 my-1" href="#">Minha conta</a>
+                <a class="nav-link px-2 my-1" href="../index.html">Sair</a>
+            </nav>
+        </div>
+
+<!--------- Header---------->
+        <div class="content col-10">
+            <div class="d-flex justify-content-between align-items-center px-3 pt-3">
+                <h4 class="fw-medium">Acompanhamento de Tráfego</h4>
+                <div class="d-flex align-items-center">
+                    <div class="notification">
+                        <span class="badge badge-pill">!</span>
+                        <i class="fa-solid fa-bell" alt="Notification Icon"></i>
+                    </div>
+                    <div class="profile">
+                        <i class="fa-solid fa-circle-user" alt="Imagem do Perfil"></i>
+                        <span class="fs-5 mt-2">
+                            <h6>Lucas</h6>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid">
+
+<!----------Flex da Tabela----------->
+                <div class="row mb-3">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header d-flex justify-content-between align-items-center">
+                                <div class="d-flex">
+                                    <input type="text" class="form-control mx-3" placeholder="Buscar">
+                                </div>
+                                <div class="d-flex px-3">
+                                    <div class="btn-group">
+                                        <button type="button" role="button" class="btn border dropdown-toggle px-4"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            Filtrar
+                                        </button>
+                                        <ul class="dropdown-menu dropdown-menu-dark">
+                                            <li><a class="dropdown-item" href="#">Tipo</a></li>
+                                            <li><a class="dropdown-item" href="#">Placa</a></li>
+                                            <li><a class="dropdown-item" href="#">Data</a></li>
+                                            <li><a class="dropdown-item" href="#">Cidade</a></li>
+                                            <li><a class="dropdown-item" href="#">Estado</a></li>
+                                            <li><a class="dropdown-item" href="#">Status</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+<!---------- Inserção de Tabela ------->
+                            <div class="card-body">
+                                <div class="card-table table-responsive px-3">
+                                    <table class="table table-dark table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>ID PASSAGEM</th>
+                                                <th>TIPO VEÍCULO</th>
+                                                <th>PLACA</th>
+                                                <th>DATA/HORA</th>
+                                                <th>PÓRTICO</th>
+                                                <th>CIDADE</th>
+                                                <th>ESTADO</th>
+                                                <th>STATUS</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>000001</td>
+                                                <td>Carro</td>
+                                                <td>ABC1234</td>
+                                                <td>14/05/2024 23:20:41</td>
+                                                <td>Anhanguera</td>
+                                                <td>Campinas</td>
+                                                <td>SP</td>
+                                                <td><span class="badge badge-operante rounded-pill">Registrada</span>
+                                                </td>
+                                                <td><a class="btn btn-detalhe"
+                                                        href="./Detalhes_Passagem.html">Detalhes</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>000002</td>
+                                                <td>Caminhão</td>
+                                                <td>DEF5678</td>
+                                                <td>14/05/2024 23:20:59</td>
+                                                <td>Castelo Branco</td>
+                                                <td>São Paulo</td>
+                                                <td>SP</td>
+                                                <td><span class="badge badge-falha rounded-pill">Falha</span></td>
+                                                <td><a class="btn btn-detalhe"
+                                                        href="./Detalhes_Passagem.html">Detalhes</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>000003</td>
+                                                <td>Moto</td>
+                                                <td>XYZ0001</td>
+                                                <td>14/05/2024 23:21:50</td>
+                                                <td>Castelo Branco</td>
+                                                <td>Sorocaba</td>
+                                                <td>SP</td>
+                                                <td><span class="badge badge-falha rounded-pill">Falha</span></td>
+                                                <td><a class="btn btn-detalhe"
+                                                        href="./Detalhes_Passagem.html">Detalhes</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>000004</td>
+                                                <td>Carro</td>
+                                                <td>QWE7418</td>
+                                                <td>14/05/2024 23:21:52</td>
+                                                <td>Bandeirantes</td>
+                                                <td>São Paulo</td>
+                                                <td>SP</td>
+                                                <td><span class="badge badge-operante rounded-pill">Registrada</span>
+                                                </td>
+                                                <td><a class="btn btn-detalhe"
+                                                        href="./Detalhes_Passagem.html">Detalhes</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>000005</td>
+                                                <td>Caminhão</td>
+                                                <td>GHI9876</td>
+                                                <td>14/05/2024 23:21:55</td>
+                                                <td>Anhanguera</td>
+                                                <td>Campinas</td>
+                                                <td>SP</td>
+                                                <td><span class="badge badge-operante rounded-pill">Registrada</span>
+                                                </td>
+                                                <td><a class="btn btn-detalhe"
+                                                        href="./Detalhes_Passagem.html">Detalhes</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>000006</td>
+                                                <td>Caminhão</td>
+                                                <td>NBV2589</td>
+                                                <td>14/05/2024 23:21:56</td>
+                                                <td>Regis Bittencourt</td>
+                                                <td>Curitiba</td>
+                                                <td>PR</td>
+                                                <td><span class="badge badge-operante rounded-pill">Registrada</span>
+                                                </td>
+                                                <td><a class="btn btn-detalhe"
+                                                        href="./Detalhes_Passagem.html">Detalhes</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>000007</td>
+                                                <td>Moto</td>
+                                                <td>KKK9999</td>
+                                                <td>14/05/2024 23:22:10</td>
+                                                <td>Washington Luis</td>
+                                                <td>Rio Claro</td>
+                                                <td>SP</td>
+                                                <td><span class="badge badge-operante rounded-pill">Registrada</span>
+                                                </td>
+                                                <td><a class="btn btn-detalhe"
+                                                        href="./Detalhes_Passagem.html">Detalhes</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>000008</td>
+                                                <td>Ônibus</td>
+                                                <td>DEV1000</td>
+                                                <td>14/05/2024 23:22:15</td>
+                                                <td>Imigrantes</td>
+                                                <td>Santos</td>
+                                                <td>SP</td>
+                                                <td><span class="badge badge-operante rounded-pill">Registrada</span>
+                                                </td>
+                                                <td><a class="btn btn-detalhe"
+                                                        href="./Detalhes_Passagem.html">Detalhes</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>000009</td>
+                                                <td>Moto</td>
+                                                <td>CSS0101</td>
+                                                <td>14/05/2024 23:22:15</td>
+                                                <td>Regis Bittencourt</td>
+                                                <td>Curitiba</td>
+                                                <td>PR</td>
+                                                <td><span class="badge badge-falha rounded-pill">Falha</span></td>
+                                                <td><a class="btn btn-detalhe"
+                                                        href="./Detalhes_Passagem.html">Detalhes</a></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span id="text-pagination">Mostrando 1 à 9 de 2.341.560 registros...</span>
+                                    <div class="d-pagination">
+                                        <nav>
+                                            <ul class="pagination">
+                                                <li class="page-item"><a class="page-link" href="#">«</a></li>
+                                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">»</a></li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+<!----- Chamada JavaScript Boostrap------>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+
+</body>
+</html>
